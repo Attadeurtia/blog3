@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>My New Hugo Site</title>
-    <link>http://localhost:1313/</link>
-    <description>Recent content on My New Hugo Site</description>
+    <title>Posts on My New Hugo Site</title>
+    <link>http://localhost:1313/posts/</link>
+    <description>Recent content in Posts on My New Hugo Site</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 09 Jan 2024 23:33:45 +0100</lastBuildDate>
-    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>un film au hasard</title>
       <link>http://localhost:1313/posts/film_au_hasard/</link>
@@ -42,13 +42,6 @@
       <pubDate>Sun, 04 Jun 2023 18:29:21 +0200</pubDate>
       <guid>http://localhost:1313/posts/jusquaubout/</guid>
       <description>&lt;p&gt;Comme tout le monde, j&amp;rsquo;ai peur du changement. Pourtant c&amp;rsquo;est une peur irrationnelle, tous les changements importants de ma vie ont été au pire bénins, au mieux positifs, pourtant voilà, je ne peux pas m&amp;rsquo;empêcher d&amp;rsquo;avoir peur.&lt;/p&gt;&#xA;&lt;p&gt;Dernièrement, c&amp;rsquo;est devoir changer d&amp;rsquo;habitat, changer à la fois de ville et d&amp;rsquo;appartement, qui m&amp;rsquo;effraie. Perdre les repères de la ville où j&amp;rsquo;ai toujours vécu et mon grand appartement où je suis libre de faire ce que je veux.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>À propos</title>
-      <link>http://localhost:1313/about/</link>
-      <pubDate>Wed, 17 May 2023 10:00:00 +0100</pubDate>
-      <guid>http://localhost:1313/about/</guid>
-      <description>&lt;p&gt;Bienvenue sur mon blog ! Étudiant touche à tout, ce site est un lieu libre de partage d&amp;rsquo;experiences, de tuto et de découvertes sur tout et rien.&lt;/p&gt;&#xA;&lt;p&gt;N&amp;rsquo;hésitez pas à me contacter si vous avez des questions ou des suggestions.&lt;/p&gt;&#xA;&lt;p&gt;Geoffrey&lt;/p&gt;</description>
     </item>
     <item>
       <title>Radio</title>
