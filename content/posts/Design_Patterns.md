@@ -1,7 +1,6 @@
 ---
 title: "Design Patterns"
 date: 2023-04-24T17:49:47+02:00
-modified: 2023-05-1T17:19:00+02:00
 draft: false
 tags: ["Design Patterns", "cours"]
 ---
@@ -69,8 +68,8 @@ abstract Cible{
  + requete()
 }
 
-Adaptateur : + requete()
-Adapté : + requeteSpécifique()
+Adaptateur : + requete()
+Adapté : + requeteSpécifique()
 note "requeteSpécifique()" as N1
 
 
@@ -156,8 +155,8 @@ class DécorateurConcretB{
  + comportementAjouté()
 }
 
-note right of Décorateur : composant.opération()
-note right of DécorateurConcretB : Décoration.opération();\ncomportementAjouté();
+note right of Décorateur : composant.opération()
+note right of DécorateurConcretB : Décoration.opération();\ncomportementAjouté();
 
 Composant <|- ComposantConcret
 Composant <|-- Décorateur
@@ -302,7 +301,7 @@ abstract Observateur{
  + miseAJour()
 }
 
-ObservateurConcret : + miseAJour()
+ObservateurConcret : + miseAJour()
 note "Pour tout o dans Observateurs\n o.miseAJour()" as N
 
 
@@ -326,16 +325,16 @@ Modélise des objets dont le comportement varie en fonction de leur état intern
 ```plantuml
 @startuml
 
-Contexte : + requette()
+Contexte : + requette()
 
 abstract État{
  + gerer(): void
 }
 
-ÉtatAConcret : + gerer()
-ÉtatBConcret : + gerer()
+ÉtatAConcret : + gerer()
+ÉtatBConcret : + gerer()
 
-note bottom of Contexte : etat.gerer()
+note bottom of Contexte : etat.gerer()
 
 Contexte -> État
 État <|-- ÉtatAConcret

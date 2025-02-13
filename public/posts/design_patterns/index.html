@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en-us">
   <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
-    <script defer src="https://cloud.umami.is/script.js" data-website-id="8261e837-91d2-433d-ba96-be0441457e4a"></script>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     
@@ -76,7 +75,7 @@ Pour s’assurer d’une meilleure conception Pour dialoguer avec les développe
 Limiter le couplage Faciliter la maintenance Être moins rigide face au changement Ils sont indispensables à connaître pour le développeur :
 Pour s’assurer d’une meilleure conception Pour dialoguer avec les développeurs (à travers le “langage pattern”) Pour comprendre les frameworks Un livre écrit par le GoF (Gang of Four : Erich Gamma, Richard Helm, Ralph Johnson, John Vlissides) décrit 23 Design Patterns appliqués à la conception orientée objet, classés en trois catégories :">
 
-	
+	<script defer src="https://cloud.umami.is/script.js" data-website-id="8261e837-91d2-433d-ba96-be0441457e4a"></script>
   </head><body class="ma0 avenir bg-near-white development">
 
     
@@ -176,8 +175,8 @@ abstract Cible{
  + requete()
 }
 
-Adaptateur : + requete()
-Adapté : + requeteSpécifique()
+Adaptateur : + requete()
+Adapté : + requeteSpécifique()
 note &#34;requeteSpécifique()&#34; as N1
 
 
@@ -254,8 +253,8 @@ class DécorateurConcretB{
  + comportementAjouté()
 }
 
-note right of Décorateur : composant.opération()
-note right of DécorateurConcretB : Décoration.opération();\ncomportementAjouté();
+note right of Décorateur : composant.opération()
+note right of DécorateurConcretB : Décoration.opération();\ncomportementAjouté();
 
 Composant &lt;|- ComposantConcret
 Composant &lt;|-- Décorateur
@@ -376,7 +375,7 @@ abstract Observateur{
  + miseAJour()
 }
 
-ObservateurConcret : + miseAJour()
+ObservateurConcret : + miseAJour()
 note &#34;Pour tout o dans Observateurs\n o.miseAJour()&#34; as N
 
 
@@ -393,16 +392,16 @@ Sujet .. N
 Modélise des objets dont le comportement varie en fonction de leur état interne. L&rsquo;idée est de définir une classe abstraite représentant l&rsquo;état général d&rsquo;un objet, et des sous-classes concrètes représentant les différents états spécifiques. Chaque état peut définir ses propres comportements pour les différentes méthodes de l&rsquo;objet. L&rsquo;objet principal, appelé &ldquo;contexte&rdquo;, maintient une référence à un objet d&rsquo;état particulier, qui détermine le comportement actuel de l&rsquo;objet. En modifiant l&rsquo;état du contexte, on peut modifier le comportement de l&rsquo;objet.</p>
 <pre tabindex="0"><code class="language-plantuml" data-lang="plantuml">@startuml
 
-Contexte : + requette()
+Contexte : + requette()
 
 abstract État{
  + gerer(): void
 }
 
-ÉtatAConcret : + gerer()
-ÉtatBConcret : + gerer()
+ÉtatAConcret : + gerer()
+ÉtatBConcret : + gerer()
 
-note bottom of Contexte : etat.gerer()
+note bottom of Contexte : etat.gerer()
 
 Contexte -&gt; État
 État &lt;|-- ÉtatAConcret
