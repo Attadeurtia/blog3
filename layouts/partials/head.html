@@ -1,10 +1,15 @@
-    {{ partialCached "hugomods/umami-analytics/index" . .Params.analyze }}
+<head>
+    <!-- Test d'inclusion -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Hugo</title>
+    <style>
+      body {
+        background-color: lightyellow;
+      }
+    </style>
     <script>
-        console.log('head.html est bien pris en compte !');
-      </script>
+      console.log('head.html a bien été pris en compte !');
+    </script>
+  </head>
   
-
-<!-- <script async defer data-website-id="8261e837-91d2-433d-ba96-be0441457e4a" src="https://cloud.umami.is/script.js"></script>
-
-
-<script defer src="https://cloud.umami.is/script.js" data-website-id="8261e837-91d2-433d-ba96-be0441457e4a"></script> -->
