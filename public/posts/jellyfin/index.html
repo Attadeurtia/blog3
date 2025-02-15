@@ -1,357 +1,164 @@
 <!DOCTYPE html>
-<html lang="en-us" dir="ltr">
-    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="Pourquoi vaut-il mieux installer l&rsquo;application que d&rsquo;utiliser le navigateur ? Il est recommandé d&rsquo;utiliser l&rsquo;application officielle de Jellyfin plutôt que le navigateur, car les films utilisent les codecs H.264 (AVC) ou H.265 (HEVC). Les navigateurs ne prennent en charge que le H.264, ce qui oblige le serveur à convertir le format (transcodage) des films HEVC, ce qui consomme plus de 90% des ressources du serveur.\nLa moitié des films de la bibliothèque sont en H.265 car, d&rsquo;une part, c&rsquo;est un format mieux adapté et plus moderne, mais également plus léger et esthétique que le H.264. La solution la plus optimisée est donc d&rsquo;installer l&rsquo;application officielle\n">
-<title>Bonne utilisation de Jellyfin</title>
+<html lang="en-us">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>Bonne utilisation de Jellyfin | My New Hugo Site</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="Pourquoi vaut-il mieux installer l&rsquo;application que d&rsquo;utiliser le navigateur ?
+Il est recommandé d&rsquo;utiliser l&rsquo;application officielle de Jellyfin plutôt que le navigateur, car les films utilisent les codecs H.264 (AVC) ou H.265 (HEVC). Les navigateurs ne prennent en charge que le H.264, ce qui oblige le serveur à convertir le format (transcodage) des films HEVC, ce qui consomme plus de 90% des ressources du serveur.
+La moitié des films de la bibliothèque sont en H.265 car, d&rsquo;une part, c&rsquo;est un format mieux adapté et plus moderne, mais également plus léger et esthétique que le H.264. La solution la plus optimisée est donc d&rsquo;installer l&rsquo;application officielle">
+    <meta name="generator" content="Hugo 0.143.1">
+    
+    
+    
+      <meta name="robots" content="noindex, nofollow">
+    
+    
 
-<link rel='canonical' href='http://localhost:1313/posts/jellyfin/'>
-
-<link rel="stylesheet" href="/scss/style.min.663803bebe609202d5b39d848f2d7c2dc8b598a2d879efa079fa88893d29c49c.css"><meta property='og:title' content="Bonne utilisation de Jellyfin">
-<meta property='og:description' content="Pourquoi vaut-il mieux installer l&rsquo;application que d&rsquo;utiliser le navigateur ? Il est recommandé d&rsquo;utiliser l&rsquo;application officielle de Jellyfin plutôt que le navigateur, car les films utilisent les codecs H.264 (AVC) ou H.265 (HEVC). Les navigateurs ne prennent en charge que le H.264, ce qui oblige le serveur à convertir le format (transcodage) des films HEVC, ce qui consomme plus de 90% des ressources du serveur.\nLa moitié des films de la bibliothèque sont en H.265 car, d&rsquo;une part, c&rsquo;est un format mieux adapté et plus moderne, mais également plus léger et esthétique que le H.264. La solution la plus optimisée est donc d&rsquo;installer l&rsquo;application officielle\n">
-<meta property='og:url' content='http://localhost:1313/posts/jellyfin/'>
-<meta property='og:site_name' content='My New Hugo Site'>
-<meta property='og:type' content='article'><meta property='article:section' content='Posts' /><meta property='article:published_time' content='2024-03-22T14:52:41&#43;01:00'/><meta property='article:modified_time' content='2024-03-22T14:52:41&#43;01:00'/>
-<meta name="twitter:title" content="Bonne utilisation de Jellyfin">
-<meta name="twitter:description" content="Pourquoi vaut-il mieux installer l&rsquo;application que d&rsquo;utiliser le navigateur ? Il est recommandé d&rsquo;utiliser l&rsquo;application officielle de Jellyfin plutôt que le navigateur, car les films utilisent les codecs H.264 (AVC) ou H.265 (HEVC). Les navigateurs ne prennent en charge que le H.264, ce qui oblige le serveur à convertir le format (transcodage) des films HEVC, ce qui consomme plus de 90% des ressources du serveur.\nLa moitié des films de la bibliothèque sont en H.265 car, d&rsquo;une part, c&rsquo;est un format mieux adapté et plus moderne, mais également plus léger et esthétique que le H.264. La solution la plus optimisée est donc d&rsquo;installer l&rsquo;application officielle\n">
-    </head>
-    <body class="
-    article-page
-    ">
-    <script>
-        (function() {
-            const colorSchemeKey = 'StackColorScheme';
-            if(!localStorage.getItem(colorSchemeKey)){
-                localStorage.setItem(colorSchemeKey, "auto");
-            }
-        })();
-    </script><script>
-    (function() {
-        const colorSchemeKey = 'StackColorScheme';
-        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
-        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
-
-        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
-            
-
-            document.documentElement.dataset.scheme = 'dark';
-        } else {
-            document.documentElement.dataset.scheme = 'light';
-        }
-    })();
-</script>
-<div class="container main-container flex on-phone--column compact"><aside class="sidebar left-sidebar sticky ">
-    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
-        <span class="hamburger-box">
-            <span class="hamburger-inner"></span>
-        </span>
-    </button>
-
-    <header>
-        
-            
-            <figure class="site-avatar">
-                <a href="/">
-                
-                    
-                    
-                    
-                        
-                        <img src="/img/avatar_hu_f509edb42ecc0ebd.png" width="300"
-                            height="300" class="site-logo" loading="lazy" alt="Avatar">
-                    
-                
-                </a>
-                
-            </figure>
-            
-        
-        
-        <div class="site-meta">
-            <h1 class="site-name"><a href="/">My New Hugo Site</a></h1>
-            <h2 class="site-description"></h2>
-        </div>
-    </header><ol class="menu" id="main-menu">
-        
-        
-        <li class="menu-bottom-section">
-            <ol class="menu">
-
-                
-                    <li id="dark-mode-toggle">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <circle cx="8" cy="12" r="2" />
-  <rect x="2" y="6" width="20" height="12" rx="6" />
-</svg>
+    
+<link rel="stylesheet" href="/ananke/css/main.min.css" >
 
 
 
-                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <circle cx="16" cy="12" r="2" />
-  <rect x="2" y="6" width="20" height="12" rx="6" />
-</svg>
-
-
-
-                        <span>Dark Mode</span>
-                    </li>
-                
-            </ol>
-        </li>
-    </ol>
-</aside>
 
     
 
-            <main class="main full-width">
-    <article class="main-article">
-    <header class="article-header">
+    
+      
 
-    <div class="article-details">
     
 
-    <div class="article-title-wrapper">
-        <h2 class="article-title">
-            <a href="/posts/jellyfin/">Bonne utilisation de Jellyfin</a>
-        </h2>
     
-        
+
+    
+      <link rel="canonical" href="http://localhost:1313/posts/jellyfin/">
+    
+
+    <meta property="og:url" content="http://localhost:1313/posts/jellyfin/">
+  <meta property="og:site_name" content="My New Hugo Site">
+  <meta property="og:title" content="Bonne utilisation de Jellyfin">
+  <meta property="og:description" content="Pourquoi vaut-il mieux installer l’application que d’utiliser le navigateur ? Il est recommandé d’utiliser l’application officielle de Jellyfin plutôt que le navigateur, car les films utilisent les codecs H.264 (AVC) ou H.265 (HEVC). Les navigateurs ne prennent en charge que le H.264, ce qui oblige le serveur à convertir le format (transcodage) des films HEVC, ce qui consomme plus de 90% des ressources du serveur.
+La moitié des films de la bibliothèque sont en H.265 car, d’une part, c’est un format mieux adapté et plus moderne, mais également plus léger et esthétique que le H.264. La solution la plus optimisée est donc d’installer l’application officielle">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2024-03-22T14:52:41+01:00">
+    <meta property="article:modified_time" content="2024-03-22T14:52:41+01:00">
+
+  <meta itemprop="name" content="Bonne utilisation de Jellyfin">
+  <meta itemprop="description" content="Pourquoi vaut-il mieux installer l’application que d’utiliser le navigateur ? Il est recommandé d’utiliser l’application officielle de Jellyfin plutôt que le navigateur, car les films utilisent les codecs H.264 (AVC) ou H.265 (HEVC). Les navigateurs ne prennent en charge que le H.264, ce qui oblige le serveur à convertir le format (transcodage) des films HEVC, ce qui consomme plus de 90% des ressources du serveur.
+La moitié des films de la bibliothèque sont en H.265 car, d’une part, c’est un format mieux adapté et plus moderne, mais également plus léger et esthétique que le H.264. La solution la plus optimisée est donc d’installer l’application officielle">
+  <meta itemprop="datePublished" content="2024-03-22T14:52:41+01:00">
+  <meta itemprop="dateModified" content="2024-03-22T14:52:41+01:00">
+  <meta itemprop="wordCount" content="206">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Bonne utilisation de Jellyfin">
+  <meta name="twitter:description" content="Pourquoi vaut-il mieux installer l’application que d’utiliser le navigateur ? Il est recommandé d’utiliser l’application officielle de Jellyfin plutôt que le navigateur, car les films utilisent les codecs H.264 (AVC) ou H.265 (HEVC). Les navigateurs ne prennent en charge que le H.264, ce qui oblige le serveur à convertir le format (transcodage) des films HEVC, ce qui consomme plus de 90% des ressources du serveur.
+La moitié des films de la bibliothèque sont en H.265 car, d’une part, c’est un format mieux adapté et plus moderne, mais également plus léger et esthétique que le H.264. La solution la plus optimisée est donc d’installer l’application officielle">
+
+	
+  </head><body class="ma0 avenir bg-near-white development">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
+      
+        My New Hugo Site
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+      <div class="ananke-socials"></div>
+
     </div>
+  </div>
+</nav>
 
-    
-    
-    
-    
-    <footer class="article-time">
-        
-            <div>
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
-  <circle cx="18" cy="18" r="4" />
-  <path d="M15 3v4" />
-  <path d="M7 3v4" />
-  <path d="M3 11h16" />
-  <path d="M18 16.496v1.504l1 1" />
-</svg>
-                <time class="article-time--published">Mar 22, 2024</time>
-            </div>
-        
-
-        
-            <div>
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <circle cx="12" cy="12" r="9" />
-  <polyline points="12 7 12 12 15 15" />
-</svg>
+    </div>
+  </header>
 
 
 
-                <time class="article-time--reading">
-                    1 minute read
-                </time>
-            </div>
-        
-    </footer>
-    
+    <main class="pb7" role="main">
+      
+  
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked ttu">
+          
+        Posts
+      </aside><div id="sharing" class="mt3 ananke-socials"></div>
+<h1 class="f1 athelas mt3 mb1">Bonne utilisation de Jellyfin</h1>
+      
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2024-03-22T14:52:41+01:00">March 22, 2024</time>
+      
 
-    
-</div>
-
-</header>
-
-    <section class="article-content">
-    
-    
-    <h1 id="pourquoi-vaut-il-mieux-installer-lapplication-que-dutiliser-le-navigateur-">Pourquoi vaut-il mieux installer l&rsquo;application que d&rsquo;utiliser le navigateur ?
-</h1><p>Il est recommandé d&rsquo;utiliser l&rsquo;application officielle de Jellyfin plutôt que le navigateur, car les films utilisent <a class="link" href="https://fr.wikipedia.org/wiki/Codec"  target="_blank" rel="noopener"
-    >les codecs</a> H.264 (AVC) ou H.265 (HEVC). <a class="link" href="https://jellyfin.org/docs/general/clients/codec-support/"  target="_blank" rel="noopener"
-    >Les navigateurs</a> ne prennent en charge que le H.264, ce qui oblige le serveur à convertir le format (transcodage) des films HEVC, ce qui consomme plus de 90% des ressources du serveur.</p>
-<p>La moitié des films de la bibliothèque sont en H.265 car, d&rsquo;une part, c&rsquo;est un <a class="link" href="https://www.tomshardware.com/reference/h264-h265-hevc-codec-definition"  target="_blank" rel="noopener"
-    >format mieux adapté</a> et plus moderne, mais également plus léger et esthétique que le H.264. La solution la plus optimisée est donc d&rsquo;installer l&rsquo;application officielle</p>
-<h1 id="comment-installer-lapplication-jellyfin">Comment installer l&rsquo;application Jellyfin
-</h1><ul>
-<li>Application Android officielle : <a class="link" href="https://play.google.com/store/apps/details?id=org.jellyfin.mobile"  target="_blank" rel="noopener"
-    >https://play.google.com/store/apps/details?id=org.jellyfin.mobile</a></li>
-<li>Application Android que j&rsquo;utilise : <a class="link" href="https://play.google.com/store/apps/details?id=dev.jdtech.jellyfin"  target="_blank" rel="noopener"
-    >https://play.google.com/store/apps/details?id=dev.jdtech.jellyfin</a></li>
-<li>Application Windows officielle : <a class="link" href="https://github.com/jellyfin/jellyfin-media-player/releases"  target="_blank" rel="noopener"
-    >https://github.com/jellyfin/jellyfin-media-player/releases</a></li>
+      
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><h1 id="pourquoi-vaut-il-mieux-installer-lapplication-que-dutiliser-le-navigateur-">Pourquoi vaut-il mieux installer l&rsquo;application que d&rsquo;utiliser le navigateur ?</h1>
+<p>Il est recommandé d&rsquo;utiliser l&rsquo;application officielle de Jellyfin plutôt que le navigateur, car les films utilisent <a href="https://fr.wikipedia.org/wiki/Codec">les codecs</a> H.264 (AVC) ou H.265 (HEVC). <a href="https://jellyfin.org/docs/general/clients/codec-support/">Les navigateurs</a> ne prennent en charge que le H.264, ce qui oblige le serveur à convertir le format (transcodage) des films HEVC, ce qui consomme plus de 90% des ressources du serveur.</p>
+<p>La moitié des films de la bibliothèque sont en H.265 car, d&rsquo;une part, c&rsquo;est un <a href="https://www.tomshardware.com/reference/h264-h265-hevc-codec-definition">format mieux adapté</a> et plus moderne, mais également plus léger et esthétique que le H.264. La solution la plus optimisée est donc d&rsquo;installer l&rsquo;application officielle</p>
+<h1 id="comment-installer-lapplication-jellyfin">Comment installer l&rsquo;application Jellyfin</h1>
+<ul>
+<li>Application Android officielle : <a href="https://play.google.com/store/apps/details?id=org.jellyfin.mobile">https://play.google.com/store/apps/details?id=org.jellyfin.mobile</a></li>
+<li>Application Android que j&rsquo;utilise : <a href="https://play.google.com/store/apps/details?id=dev.jdtech.jellyfin">https://play.google.com/store/apps/details?id=dev.jdtech.jellyfin</a></li>
+<li>Application Windows officielle : <a href="https://github.com/jellyfin/jellyfin-media-player/releases">https://github.com/jellyfin/jellyfin-media-player/releases</a></li>
 </ul>
-<p><img src="/public/categories/posts/jellyfin/Application%20Windows%20officielle.png"
-	
-	
-	
-	loading="lazy"
-	
-		alt="version de Windows à téléchargé sur github"
-	
-	
-></p>
+<p><img src="public/categories/posts/jellyfin/Application%20Windows%20officielle.png" alt="version de Windows à téléchargé sur github"></p>
 <p><em>Attention à bien prendre la version x64 et non la x86</em></p>
-<p>Lien officiel de toutes les versions de Jellyfin : <a class="link" href="https://jellyfin.org/downloads"  target="_blank" rel="noopener"
-    >https://jellyfin.org/downloads</a></p>
+<p>Lien officiel de toutes les versions de Jellyfin : <a href="https://jellyfin.org/downloads">https://jellyfin.org/downloads</a></p>
 <hr>
 <p>Remarque, si le film est en H.264 vous pouvez le lire depuis le navigateur sans souci.</p>
 <p>Film en H.264
-<img src=":/f481bec57ac6480ab8e1c06e9d87d4f3"
-	
-	
-	
-	loading="lazy"
-	
-		alt="Film en H.264 (AVC)"
-	
-	
-></p>
+<img src=":/f481bec57ac6480ab8e1c06e9d87d4f3" alt="Film en H.264 (AVC)
+"></p>
 <p>Film en H.265 (HEVC)
-<img src=":/17617e536ec64a28815b068a77c0bf6e"
-	
-	
-	
-	loading="lazy"
-	
-		alt="Film en H.265"
-	
-	
-></p>
+<img src=":/17617e536ec64a28815b068a77c0bf6e" alt="Film en H.265
+"></p>
 <hr>
-<p>Note : Windows ne gère pas non plus nativement le H.265, mais vous pouvez télécharger <a class="link" href="https://www.videolan.org/vlc/"  target="_blank" rel="noopener"
-    >VLC</a> pour le lire (si ce n&rsquo;est pas déjà fait, il a quand même été installé plus de 400 milliards de fois).</p>
-
-</section>
-
-
-    <footer class="article-footer">
-    
-
-    </footer>
-
-
-    
-</article>
-
-    
-
-    
-
-     
-    
-        
-    
-
-    <footer class="site-footer">
-    <section class="copyright">
-        &copy; 
-        
-        2025 My New Hugo Site
-    </section>
-    
-    <section class="powerby">
-        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
-        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.30.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
-    </section>
-</footer>
-
-
-    
-<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
-
-    
-    <div class="pswp__bg"></div>
-
-    
-    <div class="pswp__scroll-wrap">
-
-        
-        <div class="pswp__container">
-            <div class="pswp__item"></div>
-            <div class="pswp__item"></div>
-            <div class="pswp__item"></div>
-        </div>
-
-        
-        <div class="pswp__ui pswp__ui--hidden">
-
-            <div class="pswp__top-bar">
-
-                
-
-                <div class="pswp__counter"></div>
-
-                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
-
-                <button class="pswp__button pswp__button--share" title="Share"></button>
-
-                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
-
-                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
-
-                
-                
-                <div class="pswp__preloader">
-                    <div class="pswp__preloader__icn">
-                        <div class="pswp__preloader__cut">
-                            <div class="pswp__preloader__donut"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
-                <div class="pswp__share-tooltip"></div>
-            </div>
-
-            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
-            </button>
-
-            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
-            </button>
-
-            <div class="pswp__caption">
-                <div class="pswp__caption__center"></div>
-            </div>
-
-        </div>
-
+<p>Note : Windows ne gère pas non plus nativement le H.265, mais vous pouvez télécharger <a href="https://www.videolan.org/vlc/">VLC</a> pour le lire (si ce n&rsquo;est pas déjà fait, il a quand même été installé plus de 400 milliards de fois).</p>
+<ul class="pa0">
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+      
+      
+      </div>
     </div>
 
-</div><script 
-                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
-                defer
-                >
-            </script><script 
-                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
-                defer
-                >
-            </script><link 
-                rel="stylesheet" 
-                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
-            ><link 
-                rel="stylesheet" 
-                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
-            >
+    <aside class="w-30-l mt6-l">
 
-            </main>
-        </div>
-        <script 
-                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
-                
-                >
-            </script><script type="text/javascript" src="/ts/main.3165ca7d37e9a4d0052fbff165ddedeec951b9904b93b3d2160daddf31404f46.js" defer></script>
-<script>
-    (function () {
-        const customFont = document.createElement('link');
-        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
 
-        customFont.type = "text/css";
-        customFont.rel = "stylesheet";
 
-        document.head.appendChild(customFont);
-    }());
-</script>
 
-    </body>
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://localhost:1313/" >
+    &copy;  My New Hugo Site 2025 
+  </a>
+    <div><div class="ananke-socials"></div>
+</div>
+  </div>
+</footer>
+
+  </body>
 </html>

@@ -1,218 +1,33 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-    <channel>
-        <title>Linux on My New Hugo Site</title>
-        <link>http://localhost:1313/tags/linux/</link>
-        <description>Recent content in Linux on My New Hugo Site</description>
-        <generator>Hugo -- gohugo.io</generator>
-        <language>en-us</language>
-        <lastBuildDate>Thu, 27 Apr 2023 17:49:47 +0200</lastBuildDate><atom:link href="http://localhost:1313/tags/linux/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>Comment configurer github</title>
-        <link>http://localhost:1313/posts/configuregit/</link>
-        <pubDate>Thu, 27 Apr 2023 17:49:47 +0200</pubDate>
-        
-        <guid>http://localhost:1313/posts/configuregit/</guid>
-        <description>&lt;p&gt;Pour utiliser github sur son ordinateur il faut installer git, ajouter une clé ssh dans son compte github et configurer git, puis télécharger le projet, ces étapes sont indispensables sur chaque machine.&lt;/p&gt;
-&lt;h2 id=&#34;installer-git&#34;&gt;Installer git
-&lt;/h2&gt;&lt;p&gt;Vérifier si git est déjà installé : &lt;code&gt;git --version&lt;/code&gt; sinon &lt;a class=&#34;link&#34; href=&#34;https://git-scm.com/downloads&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;télécharger git&lt;/a&gt;&lt;/p&gt;
-&lt;h2 id=&#34;configurer-git-en-local&#34;&gt;Configurer git en local
-&lt;/h2&gt;&lt;p&gt;C&amp;rsquo;est les informations qui seront affichées dans les commits, il faut les configurer une fois par machine.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Configurer le nom d&amp;rsquo;utilisateur : &lt;code&gt;git config --global user.name &amp;quot;John Doe&amp;quot;&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;Configurer l&amp;rsquo;adresse mail :&lt;code&gt;git config --global user.email&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Les informations sont stockées dans le fichier &lt;code&gt;~/.gitconf&lt;/code&gt;, si vous voulez les modifier vous pouvez le faire directement dans le fichier.&lt;/p&gt;
-&lt;p&gt;En soi, vous pouvez mettre ce que vous voulez, ce n&amp;rsquo;est pas lié à votre compte github, c&amp;rsquo;est juste pour que les commits soient plus clairs. Mais il est conseillé de mettre les mêmes informations que sur votre compte github.&lt;/p&gt;
-&lt;h2 id=&#34;générer-une-clé-ssh&#34;&gt;Générer une clé ssh
-&lt;/h2&gt;&lt;p&gt;Il n&amp;rsquo;y a besoin que d&amp;rsquo;une clé ssh par machine, si vous avez déjà une clé ssh, vous pouvez la réutiliser, pour afficher votre clé ssh publique, vous pouvez utiliser la commande &lt;code&gt;cat ~/.ssh/id_rsa.pub&lt;/code&gt;.&lt;/p&gt;
-&lt;p&gt;Si vous n&amp;rsquo;avez pas de clé ssh, vous pouvez &lt;a class=&#34;link&#34; href=&#34;https://www.linuxtricks.fr/wiki/wiki.php?id_contents=168&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;générer une clé ssh&lt;/a&gt; avec cette commande &lt;code&gt;ssh-keygen&lt;/code&gt;, puis appuyer sur entrée pour valider tous les paramètres par défaut.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;root@b99ab948939e:/# ssh-keygen 
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Generating public/private rsa key pair.
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Enter file in which to save the key &lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;/root/.ssh/id_rsa&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;: 
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Created directory &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;/root/.ssh&amp;#39;&lt;/span&gt;.
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Enter passphrase &lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;empty &lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; no passphrase&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;: 
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Enter same passphrase again: 
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Your identification has been saved in /root/.ssh/id_rsa
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Your public key has been saved in /root/.ssh/id_rsa.pub
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;The key fingerprint is:
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;SHA256:duhA+0K3IXdKJsyMFHu17v41E8+sEFIhe2cq++W8mas root@b99ab948939e
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;The key&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;&amp;#39;&lt;/span&gt;s randomart image is:
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;+---&lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;RSA 3072&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt;----+
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;|    .   o .      |
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;|     o . + .     |
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;|    o o o o o    |
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;|   . B o + +     |
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;|    . X S &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; .    |
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;|     . &amp;amp; X . &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;   |
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;|      . B . &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; +  |
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;|       o . * *   |
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;|        ..E.Oo   |
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;+----&lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;SHA256&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt;-----+
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;root@b99ab948939e:/#
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Si cela ne fonctionne pas, il est possible que vous n&amp;rsquo;ayez pas installé ssh, pour l&amp;rsquo;installer : &lt;code&gt;sudo apt install ssh&lt;/code&gt;.&lt;/p&gt;
-&lt;p&gt;Cela va créer deux fichiers dans le répertoire &lt;code&gt;~/.ssh&lt;/code&gt; :&lt;code&gt;id_rsa&lt;/code&gt; et&lt;code&gt;id_rsa.pub&lt;/code&gt;. Le premier est la clé privée qui est à garder absolument secrète, le second est la clé publique, qui est à partager avec les différents services, ici github.&lt;/p&gt;
-&lt;p&gt;Puis vous pouvez copier coller votre clé ssh publique &lt;code&gt;cat ~/.ssh/id_rsa.pub&lt;/code&gt;.&lt;/p&gt;
-&lt;h2 id=&#34;rajouter-sa-clé-ssh-à-github&#34;&gt;Rajouter sa clé ssh à github
-&lt;/h2&gt;&lt;p&gt;Maintenant, vous devez ajouter votre clé ssh publique à votre compte &lt;a class=&#34;link&#34; href=&#34;https://docs.github.com/fr/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account?tool=webui&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;github&lt;/a&gt;.&lt;/p&gt;
-&lt;h2 id=&#34;télécharger-le-projet&#34;&gt;Télécharger le projet
-&lt;/h2&gt;&lt;p&gt;Ne reste plus qu&amp;rsquo;à télécharger votre projet, sur la page du projet, cliquer sur le bouton vert &amp;ldquo;code&amp;rdquo; et copier le lien ssh, (attention, il faut bien copier le lien ssh et pas le lien https).&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;git clone lien_ssh&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;Voilà, vous pouvez commencer à travailler sur le projet, et les push seront directement envoyés sur le projet github.&lt;/p&gt;
-</description>
-        </item>
-        <item>
-        <title>Apt</title>
-        <link>http://localhost:1313/posts/apt/</link>
-        <pubDate>Sun, 23 Apr 2023 22:03:54 +0200</pubDate>
-        
-        <guid>http://localhost:1313/posts/apt/</guid>
-        <description>&lt;h1 id=&#34;apt&#34;&gt;apt
-&lt;/h1&gt;&lt;p&gt;Voici les commandes les plus couramment utilisées avec &lt;code&gt;apt&lt;/code&gt; :&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;sudo apt update&lt;/code&gt; : Mettre à jour la liste des paquets disponibles&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;sudo apt upgrade&lt;/code&gt; : Mettre à jour tous les paquets installés
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;sudo apt upgrade -y&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;sudo apt install &amp;lt;nom_du_paquet_1&amp;gt; &amp;lt;nom_du_paquet_2&amp;gt;&lt;/code&gt;  : Installer un paquet&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;sudo apt remove &amp;lt;nom_du_paquet&amp;gt;&lt;/code&gt; : Supprimer un paquet&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;sudo apt search &amp;lt;terme_de_recherche&amp;gt;&lt;/code&gt; : Rechercher un paquet&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;sudo apt autoremove&lt;/code&gt; : Supprimer les paquets qui ne sont plus nécessaires&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;sudo apt clean&lt;/code&gt; : Supprimer les fichiers de cache téléchargés lors de l&amp;rsquo;installation de paquets&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;apt clean&lt;/code&gt; efface tout du répertoire local des fichiers de paquets récupérés. Il supprime tout sauf le fichier de verrouillage de &lt;code&gt;/var/cache/apt/archives/&lt;/code&gt; et &lt;code&gt;/var/cache/apt/archives/partial/&lt;/code&gt;¹.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;apt autoclean&lt;/code&gt;, comme &lt;code&gt;clean&lt;/code&gt;, efface le répertoire local des fichiers de paquets récupérés. La différence est qu&amp;rsquo;il ne supprime que les fichiers de paquets qui ne peuvent plus être téléchargés et qui sont en grande partie inutiles. Cela permet de maintenir un cache sur une longue période sans qu&amp;rsquo;il ne devienne incontrôlable¹.&lt;/li&gt;
-&lt;li&gt;Il n&amp;rsquo;y a pas d&amp;rsquo;option &lt;code&gt;clear&lt;/code&gt; pour la commande &lt;code&gt;apt&lt;/code&gt;.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;(1) apt - What is difference between the options &amp;ldquo;autoclean&amp;rdquo;, &amp;ldquo;autoremove &amp;hellip;. &lt;a class=&#34;link&#34; href=&#34;https://askubuntu.com/questions/3167/what-is-difference-between-the-options-autoclean-autoremove-and-clean&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;https://askubuntu.com/questions/3167/what-is-difference-between-the-options-autoclean-autoremove-and-clean&lt;/a&gt;.
-(2) apt - clean, autoclean, and autoremove &amp;mdash; combining them is a good &amp;hellip;. &lt;a class=&#34;link&#34; href=&#34;https://askubuntu.com/questions/984797/clean-autoclean-and-autoremove-combining-them-is-a-good-step&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;https://askubuntu.com/questions/984797/clean-autoclean-and-autoremove-combining-them-is-a-good-step&lt;/a&gt;.
-(3) Difference between apt clean &amp;amp; apt autoclean in Ubuntu. &lt;a class=&#34;link&#34; href=&#34;https://techpiezo.com/linux/difference-between-apt-clean-apt-autoclean-in-ubuntu/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;https://techpiezo.com/linux/difference-between-apt-clean-apt-autoclean-in-ubuntu/&lt;/a&gt;.
-(4) linux - What are the differences between apt clean/remove/purge etc &amp;hellip;. &lt;a class=&#34;link&#34; href=&#34;https://stackoverflow.com/questions/68635646/what-are-the-differences-between-apt-clean-remove-purge-etc-commands&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;https://stackoverflow.com/questions/68635646/what-are-the-differences-between-apt-clean-remove-purge-etc-commands&lt;/a&gt;.&lt;/p&gt;
-</description>
-        </item>
-        <item>
-        <title>Docker</title>
-        <link>http://localhost:1313/posts/docker/</link>
-        <pubDate>Fri, 21 Apr 2023 21:15:02 +0200</pubDate>
-        
-        <guid>http://localhost:1313/posts/docker/</guid>
-        <description>&lt;h2 id=&#34;docker&#34;&gt;Docker
-&lt;/h2&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;docker pull : Récupérer une image depuis un registre
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;docker run :
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;- p 8080:8080
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;- rm : Supprimer le conteneur à la fin de son exécution
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;- it : Interactif
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;- v &lt;span style=&#34;color:#66d9ef&#34;&gt;$(&lt;/span&gt;pwd&lt;span style=&#34;color:#66d9ef&#34;&gt;)&lt;/span&gt;:/src
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;- d : Détaché
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;- e : Variables d’environnement
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;docker run -p 8080:8080 -rm -it -v &lt;span style=&#34;color:#66d9ef&#34;&gt;$(&lt;/span&gt;pwd&lt;span style=&#34;color:#66d9ef&#34;&gt;)&lt;/span&gt;:/src -d -e NODE_ENV&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;production nom_de_l_image
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;docker run =&amp;gt; docker create + docker start&lt;/p&gt;
-&lt;p&gt;docker create id_de_l_image&lt;/p&gt;
-&lt;p&gt;docker start id_du_conteneur&lt;/p&gt;
-&lt;p&gt;docker stop id_du_conteneur&lt;/p&gt;
-&lt;p&gt;docker restart id_du_conteneur&lt;/p&gt;
-&lt;p&gt;docker rm id_du_conteneur&lt;/p&gt;
-&lt;p&gt;docker rmi id_de_l_image&lt;/p&gt;
-&lt;p&gt;docker exec -it id_du_conteneur bash&lt;/p&gt;
-&lt;p&gt;docker logs id_du_conteneur&lt;/p&gt;
-&lt;p&gt;docker stats&lt;/p&gt;
-&lt;p&gt;docker system prune : Supprimer tous les conteneurs, images, volumes et réseaux non utilisés&lt;/p&gt;
-&lt;p&gt;docker system prune -a : Supprimer tous les conteneurs, images, volumes et réseaux (même utilisés)&lt;/p&gt;
-&lt;p&gt;docker system df : Afficher l’espace disque utilisé par les images et les conteneurs&lt;/p&gt;
-&lt;p&gt;docker images : Afficher les images&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;docker ps -a
-CONTAINER ID : Identifiant unique du conteneur
-IMAGE : Image utilisée pour créer le conteneur
-COMMAND : Commande exécutée au lancement du conteneur
-CREATED : Date de création du conteneur
-STATUS : Statut du conteneur
-PORTS : Ports exposés par le conteneur
-NAMES : Nom du conteneur
-&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;docker-compose&#34;&gt;docker-compose
-&lt;/h2&gt;&lt;p&gt;docker build : Construire une image à partir d’un Dockerfile&lt;/p&gt;
-&lt;p&gt;docker build -t nom_de_l_image .&lt;/p&gt;
-&lt;p&gt;docker-compose run &amp;ndash;rm hugo &amp;ndash;help&lt;/p&gt;
-&lt;p&gt;Docker Compose : yaml
-Dockerfile :&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    FROM node:12-alpine
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    RUN apk add --no-cache python2 g++ make
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    WORKDIR /app
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    COPY . .
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    RUN yarn install --production
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    CMD &lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;node&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;src/index.js&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    EXPOSE &lt;span style=&#34;color:#ae81ff&#34;&gt;3000&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Dockerfile :&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;docker-compose.yml &lt;/span&gt;:
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;version&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;3&amp;#39;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;services&lt;/span&gt;:
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;web&lt;/span&gt;:
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#f92672&#34;&gt;build&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;.&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#f92672&#34;&gt;ports&lt;/span&gt;:
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        - &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;3000:3000&amp;#34;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#f92672&#34;&gt;volumes&lt;/span&gt;:
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        - &lt;span style=&#34;color:#ae81ff&#34;&gt;.:/app&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        - &lt;span style=&#34;color:#ae81ff&#34;&gt;/app/node_modules&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;db&lt;/span&gt;:
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#f92672&#34;&gt;image&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;mongo&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#f92672&#34;&gt;ports&lt;/span&gt;:
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        - &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;27017:27017&amp;#34;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;docker-compose up : Lancer les conteneurs&lt;/p&gt;
-&lt;p&gt;docker-compose up -d&lt;/p&gt;
-&lt;p&gt;docker-compose down : Arrêter les conteneurs&lt;/p&gt;
-&lt;h2 id=&#34;docker-maintenance&#34;&gt;docker maintenance
-&lt;/h2&gt;&lt;p&gt;docker system prune&lt;/p&gt;
-&lt;p&gt;docker system prune -a&lt;/p&gt;
-&lt;p&gt;docker system df&lt;/p&gt;
-&lt;p&gt;docker volume prune&lt;/p&gt;
-&lt;p&gt;docker volume ls&lt;/p&gt;
-&lt;p&gt;docker volume rm id_du_volume&lt;/p&gt;
-&lt;p&gt;docker volume rm $(docker volume ls -q)&lt;/p&gt;
-&lt;p&gt;sudo systemctl status docker&lt;/p&gt;
-&lt;p&gt;sudo systemctl start docker&lt;/p&gt;
-&lt;p&gt;sudo systemctl stop docker&lt;/p&gt;
-&lt;p&gt;sudo systemctl restart docker&lt;/p&gt;
-&lt;p&gt;sudo systemctl enable docker&lt;/p&gt;
-&lt;p&gt;sudo systemctl disable docker&lt;/p&gt;
-&lt;p&gt;sudo systemctl status docker&lt;/p&gt;
-&lt;h2 id=&#34;docker-configuration&#34;&gt;docker configuration
-&lt;/h2&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.docker.com/products/docker-desktop/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;https://www.docker.com/products/docker-desktop/&lt;/a&gt;
-&lt;a class=&#34;link&#34; href=&#34;https://docs.docker.com/engine/install/ubuntu/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;https://docs.docker.com/engine/install/ubuntu/&lt;/a&gt;&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo apt-get remove docker docker-engine docker.io containerd runc
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo apt update
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo apt-get install &lt;span style=&#34;color:#ae81ff&#34;&gt;\
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;&lt;/span&gt;    ca-certificates &lt;span style=&#34;color:#ae81ff&#34;&gt;\
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;&lt;/span&gt;    curl &lt;span style=&#34;color:#ae81ff&#34;&gt;\
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;&lt;/span&gt;    gnupg
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo install -m &lt;span style=&#34;color:#ae81ff&#34;&gt;0755&lt;/span&gt; -d /etc/apt/keyrings
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo chmod a+r /etc/apt/keyrings/docker.gpg
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;echo &lt;span style=&#34;color:#ae81ff&#34;&gt;\
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;&lt;/span&gt;  &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;deb [arch=&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;$(&lt;/span&gt;dpkg --print-architecture&lt;span style=&#34;color:#66d9ef&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34; signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;  &amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;$(&lt;/span&gt;. /etc/os-release &lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; echo &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;$VERSION_CODENAME&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34; stable&amp;#34;&lt;/span&gt; | &lt;span style=&#34;color:#ae81ff&#34;&gt;\
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;&lt;/span&gt;  sudo tee /etc/apt/sources.list.d/docker.list &amp;gt; /dev/null
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo apt-get update
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ls -l /var/run/docker.sock :  check the permissions
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo chmod &lt;span style=&#34;color:#ae81ff&#34;&gt;666&lt;/span&gt; /var/run/docker.sock
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo chown root:docker /var/run/docker.sock
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo usermod -aG docker $USER : Add user to docker group
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;ajouter-les-droits-docker-à-lutilisateur-courant&#34;&gt;ajouter les droits docker à l&amp;rsquo;utilisateur courant
-&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo groupadd docker
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo usermod -aG docker $USER
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;newgrp docker
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;docker run hello-world
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
-        </item>
-        
-    </channel>
+  <channel>
+    <title>Linux on My New Hugo Site</title>
+    <link>http://localhost:1313/tags/linux/</link>
+    <description>Recent content in Linux on My New Hugo Site</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 27 Apr 2023 17:49:47 +0200</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Comment configurer github</title>
+      <link>http://localhost:1313/posts/configuregit/</link>
+      <pubDate>Thu, 27 Apr 2023 17:49:47 +0200</pubDate>
+      <guid>http://localhost:1313/posts/configuregit/</guid>
+      <description>&lt;p&gt;Pour utiliser github sur son ordinateur il faut installer git, ajouter une clé ssh dans son compte github et configurer git, puis télécharger le projet, ces étapes sont indispensables sur chaque machine.&lt;/p&gt;&#xA;&lt;h2 id=&#34;installer-git&#34;&gt;Installer git&lt;/h2&gt;&#xA;&lt;p&gt;Vérifier si git est déjà installé : &lt;code&gt;git --version&lt;/code&gt; sinon &lt;a href=&#34;https://git-scm.com/downloads&#34;&gt;télécharger git&lt;/a&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;configurer-git-en-local&#34;&gt;Configurer git en local&lt;/h2&gt;&#xA;&lt;p&gt;C&amp;rsquo;est les informations qui seront affichées dans les commits, il faut les configurer une fois par machine.&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Configurer le nom d&amp;rsquo;utilisateur : &lt;code&gt;git config --global user.name &amp;quot;John Doe&amp;quot;&lt;/code&gt;&lt;/li&gt;&#xA;&lt;li&gt;Configurer l&amp;rsquo;adresse mail :&lt;code&gt;git config --global user.email&lt;/code&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Les informations sont stockées dans le fichier &lt;code&gt;~/.gitconf&lt;/code&gt;, si vous voulez les modifier vous pouvez le faire directement dans le fichier.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Apt</title>
+      <link>http://localhost:1313/posts/apt/</link>
+      <pubDate>Sun, 23 Apr 2023 22:03:54 +0200</pubDate>
+      <guid>http://localhost:1313/posts/apt/</guid>
+      <description>&lt;h1 id=&#34;apt&#34;&gt;apt&lt;/h1&gt;&#xA;&lt;p&gt;Voici les commandes les plus couramment utilisées avec &lt;code&gt;apt&lt;/code&gt; :&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;code&gt;sudo apt update&lt;/code&gt; : Mettre à jour la liste des paquets disponibles&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;sudo apt upgrade&lt;/code&gt; : Mettre à jour tous les paquets installés&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;code&gt;sudo apt upgrade -y&lt;/code&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;sudo apt install &amp;lt;nom_du_paquet_1&amp;gt; &amp;lt;nom_du_paquet_2&amp;gt;&lt;/code&gt;  : Installer un paquet&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;sudo apt remove &amp;lt;nom_du_paquet&amp;gt;&lt;/code&gt; : Supprimer un paquet&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;sudo apt search &amp;lt;terme_de_recherche&amp;gt;&lt;/code&gt; : Rechercher un paquet&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;sudo apt autoremove&lt;/code&gt; : Supprimer les paquets qui ne sont plus nécessaires&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;sudo apt clean&lt;/code&gt; : Supprimer les fichiers de cache téléchargés lors de l&amp;rsquo;installation de paquets&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;apt clean&lt;/code&gt; efface tout du répertoire local des fichiers de paquets récupérés. Il supprime tout sauf le fichier de verrouillage de &lt;code&gt;/var/cache/apt/archives/&lt;/code&gt; et &lt;code&gt;/var/cache/apt/archives/partial/&lt;/code&gt;¹.&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;apt autoclean&lt;/code&gt;, comme &lt;code&gt;clean&lt;/code&gt;, efface le répertoire local des fichiers de paquets récupérés. La différence est qu&amp;rsquo;il ne supprime que les fichiers de paquets qui ne peuvent plus être téléchargés et qui sont en grande partie inutiles. Cela permet de maintenir un cache sur une longue période sans qu&amp;rsquo;il ne devienne incontrôlable¹.&lt;/li&gt;&#xA;&lt;li&gt;Il n&amp;rsquo;y a pas d&amp;rsquo;option &lt;code&gt;clear&lt;/code&gt; pour la commande &lt;code&gt;apt&lt;/code&gt;.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;(1) apt - What is difference between the options &amp;ldquo;autoclean&amp;rdquo;, &amp;ldquo;autoremove &amp;hellip;. &lt;a href=&#34;https://askubuntu.com/questions/3167/what-is-difference-between-the-options-autoclean-autoremove-and-clean&#34;&gt;https://askubuntu.com/questions/3167/what-is-difference-between-the-options-autoclean-autoremove-and-clean&lt;/a&gt;.&#xA;(2) apt - clean, autoclean, and autoremove &amp;mdash; combining them is a good &amp;hellip;. &lt;a href=&#34;https://askubuntu.com/questions/984797/clean-autoclean-and-autoremove-combining-them-is-a-good-step&#34;&gt;https://askubuntu.com/questions/984797/clean-autoclean-and-autoremove-combining-them-is-a-good-step&lt;/a&gt;.&#xA;(3) Difference between apt clean &amp;amp; apt autoclean in Ubuntu. &lt;a href=&#34;https://techpiezo.com/linux/difference-between-apt-clean-apt-autoclean-in-ubuntu/&#34;&gt;https://techpiezo.com/linux/difference-between-apt-clean-apt-autoclean-in-ubuntu/&lt;/a&gt;.&#xA;(4) linux - What are the differences between apt clean/remove/purge etc &amp;hellip;. &lt;a href=&#34;https://stackoverflow.com/questions/68635646/what-are-the-differences-between-apt-clean-remove-purge-etc-commands&#34;&gt;https://stackoverflow.com/questions/68635646/what-are-the-differences-between-apt-clean-remove-purge-etc-commands&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Docker</title>
+      <link>http://localhost:1313/posts/docker/</link>
+      <pubDate>Fri, 21 Apr 2023 21:15:02 +0200</pubDate>
+      <guid>http://localhost:1313/posts/docker/</guid>
+      <description>&lt;h2 id=&#34;docker&#34;&gt;Docker&lt;/h2&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;docker pull : Récupérer une image depuis un registre&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;docker run :&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;- p 8080:8080&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;- rm : Supprimer le conteneur à la fin de son exécution&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;- it : Interactif&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;- v &lt;span style=&#34;color:#66d9ef&#34;&gt;$(&lt;/span&gt;pwd&lt;span style=&#34;color:#66d9ef&#34;&gt;)&lt;/span&gt;:/src&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;- d : Détaché&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;- e : Variables d’environnement&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;docker run -p 8080:8080 -rm -it -v &lt;span style=&#34;color:#66d9ef&#34;&gt;$(&lt;/span&gt;pwd&lt;span style=&#34;color:#66d9ef&#34;&gt;)&lt;/span&gt;:/src -d -e NODE_ENV&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;production nom_de_l_image&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;docker run =&amp;gt; docker create + docker start&lt;/p&gt;&#xA;&lt;p&gt;docker create id_de_l_image&lt;/p&gt;&#xA;&lt;p&gt;docker start id_du_conteneur&lt;/p&gt;</description>
+    </item>
+  </channel>
 </rss>

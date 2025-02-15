@@ -1,27 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-    <channel>
-        <title>Et Si on Sortait on My New Hugo Site</title>
-        <link>http://localhost:1313/tags/et-si-on-sortait/</link>
-        <description>Recent content in Et Si on Sortait on My New Hugo Site</description>
-        <generator>Hugo -- gohugo.io</generator>
-        <language>en-us</language>
-        <lastBuildDate>Thu, 12 Oct 2023 19:19:13 +0200</lastBuildDate><atom:link href="http://localhost:1313/tags/et-si-on-sortait/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>Les yeux fermés...</title>
-        <link>http://localhost:1313/posts/les_yeux_fermes/</link>
-        <pubDate>Thu, 12 Oct 2023 19:19:13 +0200</pubDate>
-        
-        <guid>http://localhost:1313/posts/les_yeux_fermes/</guid>
-        <description>&lt;p&gt;Le cinéma, la musique et même le théâtre sont les arts vivant les plus accessibles dans notre société, moi-même j’en suis très familier étant cinéphile et musicien. À contrario, la danse et encore un art difficile à appréhender, avec des codes et des clés de lecture, des références et une Histoire moins répandu, et que je ne connais pas.&lt;/p&gt;
-&lt;p&gt;Alors quand le service culture de ma fac offre l’occasion d’aller voir l’œuvre d’une référence dans le domaine de la danse contemporaine, malgré mon appréhension, je m’y suis inscrit. Dans le cadre de &lt;em&gt;et si on sortait&lt;/em&gt;, j’ai pu apprécier pour la première fois le travail de &lt;strong&gt;MICKAËL LE MER&lt;/strong&gt;, chorégraphe de renom qui pour deux séances remplit la salle des quinconces.&lt;/p&gt;
-&lt;p&gt;Pendant  1h, &lt;em&gt;les yeux fermés…&lt;/em&gt; a réussi à me plonger dans son univers. Celui d&amp;rsquo;une danse inspirée des œuvres de Pierre Soulage en proposant une fidèle retranscription de l’art visuel en art vivant du plus populaire des artistes monochrome contemporain.&lt;/p&gt;
-&lt;p&gt;La chorégraphie est riche et extrêmement intelligente, comportant nombreuses techniques et pratiques corporelles centrées autour d’une mise en lumière de partie du corps se dévoilant des extrémités petit à petit. L’effet ressenti est celui hypnotique des kaléidoscopes. Les zones sombres élargissant les zones neutres de la scène permettant de dévoiler des mouvements de façon très précise et suintent des mains qui rappellent presque le théâtre de marionnettes.&lt;/p&gt;
-&lt;p&gt;Les œuvres de Soulage demandent instinctivement aux visiteurs de se déplacer autour pour explorer la lumière créée dans le noir. À l’inverse, dans la danse où le spectateur est statique, c’est l’œuvre, donc ici les danseurs qui se mouveoient pour faire ressortir tous les reflets interagissant dans l’ombre ou la lumière.&lt;/p&gt;
-&lt;p&gt;Mais elle est surtout sublimée par une scénographie intrigante, avec une réflexion sur l’éclairage radical via, entre autres, un jeu de grands panneaux verticaux qui ont une triple fonction de miroir, lumière et décor.&lt;/p&gt;
-&lt;p&gt;Ces panneaux accompagnent le ballet en faisant référence aux Sombre/clair du peintre et en proposant un décor mouvant, participe parfois à la chorégraphie des danseurs comme s’ils étaient eux-mêmes des performeurs.&lt;/p&gt;
-&lt;p&gt;À une époque où la technique est tellement évoluée qu’elle n’est plus centrale dans la construction d’une œuvre qui se porte bien souvent sur une question philosophie ou politique, retrouver la magie qu’une idée technique permettant de faire évoluer la performance humaine rend l’expérience féerique et fait voyager dans une autre époque.&lt;/p&gt;
-</description>
-        </item>
-        
-    </channel>
+  <channel>
+    <title>Et Si on Sortait on My New Hugo Site</title>
+    <link>http://localhost:1313/tags/et-si-on-sortait/</link>
+    <description>Recent content in Et Si on Sortait on My New Hugo Site</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 12 Oct 2023 19:19:13 +0200</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/et-si-on-sortait/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Les yeux fermés...</title>
+      <link>http://localhost:1313/posts/les_yeux_fermes/</link>
+      <pubDate>Thu, 12 Oct 2023 19:19:13 +0200</pubDate>
+      <guid>http://localhost:1313/posts/les_yeux_fermes/</guid>
+      <description>&lt;p&gt;Le cinéma, la musique et même le théâtre sont les arts vivant les plus accessibles dans notre société, moi-même j’en suis très familier étant cinéphile et musicien. À contrario, la danse et encore un art difficile à appréhender, avec des codes et des clés de lecture, des références et une Histoire moins répandu, et que je ne connais pas.&lt;/p&gt;&#xA;&lt;p&gt;Alors quand le service culture de ma fac offre l’occasion d’aller voir l’œuvre d’une référence dans le domaine de la danse contemporaine, malgré mon appréhension, je m’y suis inscrit. Dans le cadre de &lt;em&gt;et si on sortait&lt;/em&gt;, j’ai pu apprécier pour la première fois le travail de &lt;strong&gt;MICKAËL LE MER&lt;/strong&gt;, chorégraphe de renom qui pour deux séances remplit la salle des quinconces.&lt;/p&gt;</description>
+    </item>
+  </channel>
 </rss>
