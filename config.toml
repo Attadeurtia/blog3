@@ -1,6 +1,6 @@
-baseURL = 'https://attadeurtia.github.io/blog3/'
+baseURL = 'https://attadeurtia.github.io/'
 languageCode = 'en-us'
-title = 'Geoffrey 2'
+title = 'Geoffrey 3'
 theme = 'ananke'
 
 [module]
