@@ -1,4 +1,4 @@
-module github.com/me/my-new-blog
+module github.com/Attadeurtia/blog3
 
 go 1.24.0
 
