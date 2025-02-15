@@ -1,0 +1,14 @@
+{
+    "list": [
+       {
+          "name":"cactuserveur",
+          "url":"https://cactuserveur.duckdns.org",
+          "desc":"hub du Collectif Cactus"
+       },
+       {
+          "name":"Mon github",
+          "url":"https://github.com/Attadeurtia",
+          "desc":"Mon github perso"
+       }
+    ]
+ }
