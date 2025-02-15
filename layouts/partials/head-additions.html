@@ -1,6 +1,8 @@
 <head>
     <!-- Test d'inclusion -->
     <script defer src="https://cloud.umami.is/script.js" data-website-id="8261e837-91d2-433d-ba96-be0441457e4a"></script>
+    {{ partialCached "hugomods/umami-analytics/index" . .Params.analyze }}
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Test Hugo</title>
