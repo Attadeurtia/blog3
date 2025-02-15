@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="apt Voici les commandes les plus couramment utilisées avec apt :\nsudo apt update : Mettre à jour la liste des paquets disponibles sudo apt upgrade : Mettre à jour tous les paquets installés sudo apt upgrade -y sudo apt install &lt;nom_du_paquet_1&gt; &lt;nom_du_paquet_2&gt; : Installer un paquet sudo apt remove &lt;nom_du_paquet&gt; : Supprimer un paquet sudo apt search &lt;terme_de_recherche&gt; : Rechercher un paquet sudo apt autoremove : Supprimer les paquets qui ne sont plus nécessaires sudo apt clean : Supprimer les fichiers de cache téléchargés lors de l&rsquo;installation de paquets apt clean efface tout du répertoire local des fichiers de paquets récupérés. Il supprime tout sauf le fichier de verrouillage de /var/cache/apt/archives/ et /var/cache/apt/archives/partial/¹. apt autoclean, comme clean, efface le répertoire local des fichiers de paquets récupérés. La différence est qu&rsquo;il ne supprime que les fichiers de paquets qui ne peuvent plus être téléchargés et qui sont en grande partie inutiles. Cela permet de maintenir un cache sur une longue période sans qu&rsquo;il ne devienne incontrôlable¹. Il n&rsquo;y a pas d&rsquo;option clear pour la commande apt. (1) apt - What is difference between the options &ldquo;autoclean&rdquo;, &ldquo;autoremove &hellip;. https://askubuntu.com/questions/3167/what-is-difference-between-the-options-autoclean-autoremove-and-clean. (2) apt - clean, autoclean, and autoremove &mdash; combining them is a good &hellip;. https://askubuntu.com/questions/984797/clean-autoclean-and-autoremove-combining-them-is-a-good-step. (3) Difference between apt clean &amp; apt autoclean in Ubuntu. https://techpiezo.com/linux/difference-between-apt-clean-apt-autoclean-in-ubuntu/. (4) linux - What are the differences between apt clean/remove/purge etc &hellip;. https://stackoverflow.com/questions/68635646/what-are-the-differences-between-apt-clean-remove-purge-etc-commands.\n">
+<title>Apt</title>
+
+<link rel='canonical' href='http://localhost:1313/posts/apt/'>
+
+<link rel="stylesheet" href="/scss/style.min.663803bebe609202d5b39d848f2d7c2dc8b598a2d879efa079fa88893d29c49c.css"><meta property='og:title' content="Apt">
+<meta property='og:description' content="apt Voici les commandes les plus couramment utilisées avec apt :\nsudo apt update : Mettre à jour la liste des paquets disponibles sudo apt upgrade : Mettre à jour tous les paquets installés sudo apt upgrade -y sudo apt install &lt;nom_du_paquet_1&gt; &lt;nom_du_paquet_2&gt; : Installer un paquet sudo apt remove &lt;nom_du_paquet&gt; : Supprimer un paquet sudo apt search &lt;terme_de_recherche&gt; : Rechercher un paquet sudo apt autoremove : Supprimer les paquets qui ne sont plus nécessaires sudo apt clean : Supprimer les fichiers de cache téléchargés lors de l&rsquo;installation de paquets apt clean efface tout du répertoire local des fichiers de paquets récupérés. Il supprime tout sauf le fichier de verrouillage de /var/cache/apt/archives/ et /var/cache/apt/archives/partial/¹. apt autoclean, comme clean, efface le répertoire local des fichiers de paquets récupérés. La différence est qu&rsquo;il ne supprime que les fichiers de paquets qui ne peuvent plus être téléchargés et qui sont en grande partie inutiles. Cela permet de maintenir un cache sur une longue période sans qu&rsquo;il ne devienne incontrôlable¹. Il n&rsquo;y a pas d&rsquo;option clear pour la commande apt. (1) apt - What is difference between the options &ldquo;autoclean&rdquo;, &ldquo;autoremove &hellip;. https://askubuntu.com/questions/3167/what-is-difference-between-the-options-autoclean-autoremove-and-clean. (2) apt - clean, autoclean, and autoremove &mdash; combining them is a good &hellip;. https://askubuntu.com/questions/984797/clean-autoclean-and-autoremove-combining-them-is-a-good-step. (3) Difference between apt clean &amp; apt autoclean in Ubuntu. https://techpiezo.com/linux/difference-between-apt-clean-apt-autoclean-in-ubuntu/. (4) linux - What are the differences between apt clean/remove/purge etc &hellip;. https://stackoverflow.com/questions/68635646/what-are-the-differences-between-apt-clean-remove-purge-etc-commands.\n">
+<meta property='og:url' content='http://localhost:1313/posts/apt/'>
+<meta property='og:site_name' content='My New Hugo Site'>
+<meta property='og:type' content='article'><meta property='article:section' content='Posts' /><meta property='article:tag' content='linux' /><meta property='article:tag' content='cheat-sheet' /><meta property='article:published_time' content='2023-04-23T22:03:54&#43;02:00'/><meta property='article:modified_time' content='2023-04-23T22:03:54&#43;02:00'/>
+<meta name="twitter:title" content="Apt">
+<meta name="twitter:description" content="apt Voici les commandes les plus couramment utilisées avec apt :\nsudo apt update : Mettre à jour la liste des paquets disponibles sudo apt upgrade : Mettre à jour tous les paquets installés sudo apt upgrade -y sudo apt install &lt;nom_du_paquet_1&gt; &lt;nom_du_paquet_2&gt; : Installer un paquet sudo apt remove &lt;nom_du_paquet&gt; : Supprimer un paquet sudo apt search &lt;terme_de_recherche&gt; : Rechercher un paquet sudo apt autoremove : Supprimer les paquets qui ne sont plus nécessaires sudo apt clean : Supprimer les fichiers de cache téléchargés lors de l&rsquo;installation de paquets apt clean efface tout du répertoire local des fichiers de paquets récupérés. Il supprime tout sauf le fichier de verrouillage de /var/cache/apt/archives/ et /var/cache/apt/archives/partial/¹. apt autoclean, comme clean, efface le répertoire local des fichiers de paquets récupérés. La différence est qu&rsquo;il ne supprime que les fichiers de paquets qui ne peuvent plus être téléchargés et qui sont en grande partie inutiles. Cela permet de maintenir un cache sur une longue période sans qu&rsquo;il ne devienne incontrôlable¹. Il n&rsquo;y a pas d&rsquo;option clear pour la commande apt. (1) apt - What is difference between the options &ldquo;autoclean&rdquo;, &ldquo;autoremove &hellip;. https://askubuntu.com/questions/3167/what-is-difference-between-the-options-autoclean-autoremove-and-clean. (2) apt - clean, autoclean, and autoremove &mdash; combining them is a good &hellip;. https://askubuntu.com/questions/984797/clean-autoclean-and-autoremove-combining-them-is-a-good-step. (3) Difference between apt clean &amp; apt autoclean in Ubuntu. https://techpiezo.com/linux/difference-between-apt-clean-apt-autoclean-in-ubuntu/. (4) linux - What are the differences between apt clean/remove/purge etc &hellip;. https://stackoverflow.com/questions/68635646/what-are-the-differences-between-apt-clean-remove-purge-etc-commands.\n">
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column compact"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar_hu_f509edb42ecc0ebd.png" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">My New Hugo Site</a></h1>
+            <h2 class="site-description"></h2>
+        </div>
+    </header><ol class="menu" id="main-menu">
+        
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>Dark Mode</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    
+
+            <main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/posts/apt/">Apt</a>
+        </h2>
+    
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Apr 23, 2023</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    2 minute read
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <h1 id="apt">apt
+</h1><p>Voici les commandes les plus couramment utilisées avec <code>apt</code> :</p>
+<ul>
+<li><code>sudo apt update</code> : Mettre à jour la liste des paquets disponibles</li>
+<li><code>sudo apt upgrade</code> : Mettre à jour tous les paquets installés
+<ul>
+<li><code>sudo apt upgrade -y</code></li>
+</ul>
+</li>
+<li><code>sudo apt install &lt;nom_du_paquet_1&gt; &lt;nom_du_paquet_2&gt;</code>  : Installer un paquet</li>
+<li><code>sudo apt remove &lt;nom_du_paquet&gt;</code> : Supprimer un paquet</li>
+<li><code>sudo apt search &lt;terme_de_recherche&gt;</code> : Rechercher un paquet</li>
+<li><code>sudo apt autoremove</code> : Supprimer les paquets qui ne sont plus nécessaires</li>
+<li><code>sudo apt clean</code> : Supprimer les fichiers de cache téléchargés lors de l&rsquo;installation de paquets</li>
+<li><code>apt clean</code> efface tout du répertoire local des fichiers de paquets récupérés. Il supprime tout sauf le fichier de verrouillage de <code>/var/cache/apt/archives/</code> et <code>/var/cache/apt/archives/partial/</code>¹.</li>
+<li><code>apt autoclean</code>, comme <code>clean</code>, efface le répertoire local des fichiers de paquets récupérés. La différence est qu&rsquo;il ne supprime que les fichiers de paquets qui ne peuvent plus être téléchargés et qui sont en grande partie inutiles. Cela permet de maintenir un cache sur une longue période sans qu&rsquo;il ne devienne incontrôlable¹.</li>
+<li>Il n&rsquo;y a pas d&rsquo;option <code>clear</code> pour la commande <code>apt</code>.</li>
+</ul>
+<p>(1) apt - What is difference between the options &ldquo;autoclean&rdquo;, &ldquo;autoremove &hellip;. <a class="link" href="https://askubuntu.com/questions/3167/what-is-difference-between-the-options-autoclean-autoremove-and-clean"  target="_blank" rel="noopener"
+    >https://askubuntu.com/questions/3167/what-is-difference-between-the-options-autoclean-autoremove-and-clean</a>.
+(2) apt - clean, autoclean, and autoremove &mdash; combining them is a good &hellip;. <a class="link" href="https://askubuntu.com/questions/984797/clean-autoclean-and-autoremove-combining-them-is-a-good-step"  target="_blank" rel="noopener"
+    >https://askubuntu.com/questions/984797/clean-autoclean-and-autoremove-combining-them-is-a-good-step</a>.
+(3) Difference between apt clean &amp; apt autoclean in Ubuntu. <a class="link" href="https://techpiezo.com/linux/difference-between-apt-clean-apt-autoclean-in-ubuntu/"  target="_blank" rel="noopener"
+    >https://techpiezo.com/linux/difference-between-apt-clean-apt-autoclean-in-ubuntu/</a>.
+(4) linux - What are the differences between apt clean/remove/purge etc &hellip;. <a class="link" href="https://stackoverflow.com/questions/68635646/what-are-the-differences-between-apt-clean-remove-purge-etc-commands"  target="_blank" rel="noopener"
+    >https://stackoverflow.com/questions/68635646/what-are-the-differences-between-apt-clean-remove-purge-etc-commands</a>.</p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/linux/">Linux</a>
+        
+            <a href="/tags/cheat-sheet/">Cheat-Sheet</a>
+        
+    </section>
+
+
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">Related content</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="">
+    <a href="/posts/docker/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Docker</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+        2025 My New Hugo Site
+    </section>
+    
+    <section class="powerby">
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.30.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.3165ca7d37e9a4d0052fbff165ddedeec951b9904b93b3d2160daddf31404f46.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

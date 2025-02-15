@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Privacy on My New Hugo Site</title>
+        <link>http://localhost:1313/tags/privacy/</link>
+        <description>Recent content in Privacy on My New Hugo Site</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Sun, 18 Jun 2023 19:19:13 +0200</lastBuildDate><atom:link href="http://localhost:1313/tags/privacy/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Applications</title>
+        <link>http://localhost:1313/posts/applications/</link>
+        <pubDate>Sun, 18 Jun 2023 19:19:13 +0200</pubDate>
+        
+        <guid>http://localhost:1313/posts/applications/</guid>
+        <description>&lt;p&gt;Étant donné que j&amp;rsquo;utilise un OS open source, je préfère aussi utiliser des applications open source soucieuses de ma vie privée, même si ce n&amp;rsquo;est pas du tout indispensable. D&amp;rsquo;ailleurs toutes ces applications fonctionnent aussi sur android normal donc vous pouvez les utiliser.&lt;/p&gt;
+&lt;h1 id=&#34;application&#34;&gt;Application
+&lt;/h1&gt;&lt;h2 id=&#34;basique&#34;&gt;Basique
+&lt;/h2&gt;&lt;p&gt;Pour les applications de base sur tous les téléphones SMS/téléphone, agenda, calculatrice, contact, magnétophone, j&amp;rsquo;utilise les applications par défaut qui sont très bien.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Note -&amp;gt; &lt;a class=&#34;link&#34; href=&#34;https://joplinapp.org&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;strong&gt;Joplin&lt;/strong&gt;&lt;/a&gt; : qui est une application de note complète en markdown qui remplace Keeps et OneNote.&lt;/li&gt;
+&lt;li&gt;Galerie -&amp;gt; &lt;a class=&#34;link&#34; href=&#34;https://www.simplemobiletools.com&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;strong&gt;Simple galerie Pro&lt;/strong&gt;&lt;/a&gt; : car celle de base de eos est pas terrible, bonus on peut verrouiller l’application avec son empreinte digitale.&lt;/li&gt;
+&lt;li&gt;Google Photos -&amp;gt; &lt;a class=&#34;link&#34; href=&#34;https://immich.app&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;strong&gt;Immich&lt;/strong&gt;&lt;/a&gt; : Application auto-hébergé de photo très semblable à Google photo, avec une super interface.&lt;/li&gt;
+&lt;li&gt;Photo -&amp;gt; &lt;a class=&#34;link&#34; href=&#34;https://www.celsoazevedo.com/files/android/google-camera/dev-bsg/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;strong&gt;Gcam&lt;/strong&gt;&lt;/a&gt; : pour mes photos l’application de base est vraiment nulle et moche, à la place j’utilise un fork de celle des pixels mais adaptée pour mon modèle de téléphone et le rendu est génial !&lt;/li&gt;
+&lt;li&gt;Navigateur -&amp;gt; &lt;strong&gt;Vivaldi&lt;/strong&gt; : juste meilleur navigateur&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;média&#34;&gt;Média
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;Lecteur audio -&amp;gt; &lt;strong&gt;Pulse audio&lt;/strong&gt; : juste je préfère l&amp;rsquo;interface&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Transistor&lt;/strong&gt; : lecteur de radio en ligne&lt;/li&gt;
+&lt;li&gt;YouTube -&amp;gt; &lt;strong&gt;NewPipe&lt;/strong&gt; et maintenant &lt;a class=&#34;link&#34; href=&#34;https://github.com/polymorphicshade/Tubular&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;strong&gt;Tubular&lt;/strong&gt;&lt;/a&gt;: YouTube avec une autre interface, et plein de fonctionnalité, sans pub, Background Player, Popup Player, avec en plus PeerTube, SoundCloud, Bandcamp et media.ccc.de&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Gelli&lt;/strong&gt; : interface android pour mon serveur perso de streaming de musique à la place de Spotify.&lt;/li&gt;
+&lt;li&gt;Twitch -&amp;gt; &lt;strong&gt;Twire&lt;/strong&gt; : alternative open à Twitch.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;transport&#34;&gt;Transport
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;Google Maps -&amp;gt; &lt;a class=&#34;link&#34; href=&#34;https://www.magicearth.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;strong&gt;Magic Earth&lt;/strong&gt;&lt;/a&gt; (application par défaut)&lt;/li&gt;
+&lt;li&gt;transport en commun -&amp;gt; &lt;strong&gt;Transport&lt;/strong&gt;
+simple et efficace, permet d&amp;rsquo;avoir tous les transports en commun possible de toutes les villes, de planifier des trajets et même de les partager.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Geovélo&lt;/strong&gt; : pour créer des itinéraires à vélo&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;news&#34;&gt;News
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;FreshRSS&lt;/strong&gt; : pour tous mes abonnements RSS, c’est syntonisé sur un serveur, ce qui permet d’avoir accès aux mêmes abonnements de n’importe quel appareil&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Cafeyn&lt;/strong&gt;  : application non open source de journaux en ligne, c&amp;rsquo;est souvent intégré aux offres internet en France.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;communication&#34;&gt;Communication
+&lt;/h2&gt;&lt;p&gt;FairEmail et Mastodon sont  open source, mais pas les autres.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Instagram&lt;/strong&gt; : je n&amp;rsquo;aime pas meta mais pour communiquer avec mes cercles de fréquentation en story c&amp;rsquo;est de loin le plus efficace.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Signal&lt;/strong&gt; : messagerie qui me permet de communiquer avec mes proches comme whatsapp mais en plus beaux, plus efficaces, plus sécurisé, et plus privé.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Discord&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;FairEmail&lt;/strong&gt; : l’application de mail multicomptes qui protège votre vie privée. En plus d’être très véloce, elle est pleine de très bonnes idées (afficher un lien avant de l’ouvrir en mettant bien en valeur le domaine de l’URL, blocage efficace des trackers, anti-spam, etc.).&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Mastodon&lt;/strong&gt; : réseau social décentralisé à la place de Twitter&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;non-open-source&#34;&gt;Non open source
+&lt;/h2&gt;&lt;p&gt;Certaines applications propriétaires ne possèdent pas de pendant open source, deux solutions existent alors, soit utiliser la version web, soit quand même utilisé l’application, mais avec trackercontrol pour bloquer les traqueurs.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Izly&lt;/strong&gt; : payer le RU&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Shotgun&lt;/strong&gt; : place de concert&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Headphone&lt;/strong&gt; : application de mes écouteurs&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Heath&lt;/strong&gt;  : application de ma montre connectée&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Banxo&lt;/strong&gt; : ma banque, elle est vraiment nul, mais je n&amp;rsquo;ai pas d’alternative pour les virements&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;N26&lt;/strong&gt; : application de ma banque courante&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Smach&lt;/strong&gt; : la même chose que WeTransfer, permet d&amp;rsquo;envoyer simplement des gros fichiers, mais français et respectueux de la vie privée&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Happy cow&lt;/strong&gt; : cartes des meilleurs réseaux végé (les derniers maj ont rendu l’app moins bien, si vous connaissez des alternatives je suis preneur)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Black radarr&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Shazam&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Pinterest&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;BlaBlaCar&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Netflix&lt;/strong&gt; &amp;amp; &lt;strong&gt;Prime&lt;/strong&gt; : aucun des deux n&amp;rsquo;utilisent google pour se connecter donc ils fonctionnent sans souci&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;système&#34;&gt;Système
+&lt;/h2&gt;&lt;p&gt;Les applications que je ne consulte jamais mais qui servent au bon fonctionnement de mon téléphone.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;FolderSync&lt;/strong&gt; : pour backup mes fichiers sur mon serveur Nextcloud&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;ICSx⁵&lt;/strong&gt; : permet de synchroniser mes agendas externes (comme celui de la fac)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;KDE Connect&lt;/strong&gt; : permet de contrôler mon ordinateur depuis mon téléphone (partage de fichier, play/pause, volume) très pratique quand je regarde un film un peu loin&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Nextcloud&lt;/strong&gt; : alternative open-souce à google drive, dropbox&amp;hellip;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;OpenBoard&lt;/strong&gt; : un clavier beau et efficace qui n&amp;rsquo;envoi ce que j&amp;rsquo;écris à Google&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Nova Launcher&lt;/strong&gt; : launcheur hyper custom (pas open source)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;TrackerControl&lt;/strong&gt; : bloque les traqueurs et requêtes inutiles des apps&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Shelter&lt;/strong&gt; : permet de créer un profil professionnel séparé du reste du téléphone&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Home&lt;/strong&gt; : pour contrôler les objets connectés chez moi&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Bitwarden&lt;/strong&gt; : gestionnaire de mots de passe&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;WireGuard&lt;/strong&gt; : VPN&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Catima&lt;/strong&gt; : gestionnaire de carte&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;autre&#34;&gt;Autre
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;OpenFoodFacts&lt;/strong&gt; : pour scanner les codes barres des produits et avoir des informations sur leurs compositions&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>
