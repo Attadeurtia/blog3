@@ -1,6 +1,6 @@
 baseURL = 'https://attadeurtia.github.io/'
 languageCode = 'en-us'
-title = 'Geoffrey 5'
+title = 'Geoffrey 6'
 theme = 'ananke'
 
 [module]
